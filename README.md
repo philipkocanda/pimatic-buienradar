@@ -5,6 +5,16 @@ Pimatic plugin that retrieves the local precipitation forecast for **the Netherl
 
 No API key required, uses: http://gpsgadget.buienradar.nl/data/raintext/?lat=53.22&lon=6.57
 
+Installation (Manual)
+-------------
+
+```
+cd pimatic-app/node_modules
+git clone https://github.com/philipkocanda/pimatic-buienradar
+cd pimatic-buienradar
+npm install
+```
+
 Configuration
 -------------
 
