@@ -27,7 +27,7 @@ Then add the device with the location into the devices section:
       "name": "Rain in Groningen (60 minute forecast)",
       "latitude": "53.2193840",
       "longitude": "6.5665020",
-      "minutes": 60,
+      "minutes": 60
     }
     
 The maximum forecast is 115 minutes and is returned in mm/hour precipitation.
