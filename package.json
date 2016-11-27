@@ -1,8 +1,12 @@
 {
   "name": "pimatic-buienradar",
   "description": "Provides detailed location-based rain forecast for the upcoming two hours.",
-  "author": "Philip Kocanda <philip@kocanda.nl>",
+  "author": {
+    "name": "Philip Kocanda",
+    "email": "philip@kocanda.nl"
+  },
   "main": "buienradar",
+  "license": "GPL-2.0",
   "files": [
     "buienradar.coffee",
     "README.md",
@@ -10,14 +14,17 @@
     "device-config-schema.coffee"
   ],
   "version": "0.1.0",
-  "homepage": "http://PUT GITHUB LINK HERE",
-  "private": true,
+  "homepage": "https://github.com/philipkocanda/pimatic-buienradar",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/pimatic/pimatic-plugin-template.git"
+    "url": "git+https://github.com/philipkocanda/pimatic-buienradar.git"
   },
   "keywords": [
-    "pimatic"
+    "pimatic",
+    "buienradar"
   ],
   "configSchema": "buienradar-config-schema.coffee",
   "dependencies": {
