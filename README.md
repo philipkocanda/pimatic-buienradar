@@ -3,7 +3,7 @@ pimatic-buienradar
 
 Pimatic plugin that retrieves the local precipitation forecast for **the Netherlands**.
 
-No API key required, uses: http://gpsgadget.buienradar.nl/data/raintext/?lat=53.22&lon=6.57
+No API key required, uses: https://gps.buienradar.nl/getrr.php?lat=53.22&lon=6.57
 
 Installation (Manual)
 -------------
