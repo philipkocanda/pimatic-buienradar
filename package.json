@@ -5,6 +5,16 @@
     "name": "Philip Kocanda",
     "email": "philip@kocanda.nl"
   },
+  "contributors": [
+    {
+      "name": "philipkocanda",
+      "url": "https://github.com/philipkocanda"
+    },
+    {
+      "name": "pathia",
+      "url": "https://github.com/pathia"
+    }
+  ],
   "main": "buienradar",
   "license": "GPL-2.0",
   "files": [
