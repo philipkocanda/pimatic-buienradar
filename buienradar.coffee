@@ -24,7 +24,7 @@ module.exports = (env) ->
       @minutes = Math.ceil(@config.minutes / 5) * 5 # Round to nearest five minutes
       @latitude = @_round(@config.latitude, 2)
       @longitude = @_round(@config.longitude, 2)
-	  @url = "https://gps.buienradar.nl/getrr.php?lat=#{@latitude}&lon=#{@longitude}"
+      @url = "https://gps.buienradar.nl/getrr.php?lat=#{@latitude}&lon=#{@longitude}"
       @timeout = 300000 # Check for changes every 5 minutes
 
       super()
