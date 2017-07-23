@@ -23,7 +23,7 @@
     "buienradar-config-schema.coffee",
     "device-config-schema.coffee"
   ],
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/philipkocanda/pimatic-buienradar",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -42,7 +42,7 @@
     "request-promise": "^4.1.1"
   },
   "peerDependencies": {
-    "pimatic": "~0.9"
+    "pimatic": ">=0.8.0 <1.0.0"
   },
   "engines": {
     "node": ">0.8.x",
