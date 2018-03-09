@@ -38,16 +38,16 @@ module.exports = (env) ->
     requestData: () =>
       @requestPromise = rp(@url)
         .then((data) =>
-          startTime = @_getStartTime(data);
-          forecastTime = @_formatTime(@_timeWithOffset(startTime.hours, startTime.minutes, @minutes));
-          rain = @_getRainAmountForTime(data, forecastTime)
+          if startTime = @_getStartTime(data)
+            forecastTime = @_formatTime(@_timeWithOffset(startTime.hours, startTime.minutes, @minutes))
+            rain = @_getRainAmountForTime(data, forecastTime)
 
-          # Convert to mm/hour
-          rain = @_round(Math.pow(10, (rain - 109) / 32), 1)
+            # Convert to mm/hour
+            rain = @_round(Math.pow(10, (rain - 109) / 32), 1)
 
-          env.logger.debug("Rain amount: #{rain}")
+            env.logger.debug("Rain amount: #{rain}")
 
-          @_setAttribute "rain", rain
+            @_setAttribute "rain", rain
 
           @_currentRequest = Promise.resolve()
         )
@@ -94,12 +94,12 @@ module.exports = (env) ->
 
     _getStartTime: (data) ->
       firstRow = data.split("\n")[0]
-      matches = firstRow.match(/\d+\|(\d{2}):(\d{2})/m)
-
-      return {
-        hours: matches[1],
-        minutes: matches[2],
-      }
+      if matches = firstRow.match(/\d+\|(\d{2}):(\d{2})/m)
+        return {
+          hours: matches[1],
+          minutes: matches[2],
+        }
+      return false
 
     _round: (number, precision) ->
       factor = Math.pow(10, precision)
